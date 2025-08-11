@@ -1,0 +1,12 @@
+---
+- name: Atualizar e fazer upgrade de pacotes APT
+  hosts: all
+  become: yes
+  tasks:
+    - name: Atualizar a lista de pacotes APT
+      apt:
+        update_cache: yes
+
+    - name: Fazer upgrade dos pacotes instalados
+      apt:
+        upgrade: dist
