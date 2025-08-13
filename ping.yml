@@ -1,6 +1,6 @@
 ---
 - name: Testa ping nos hosts
-  hosts: all:!grupo_a
+  hosts: all:!group_A
   tasks:
     - name: Ping nos hots
       ansible.builtin.ping:
